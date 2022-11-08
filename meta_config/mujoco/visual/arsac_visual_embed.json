@@ -1,0 +1,28 @@
+{
+    "env_name" : "HalfCheetah-v3",
+
+    "representation_shape":16,
+
+    "embedding_shape":3,
+
+    "cat_state_task": false,
+
+    "p_state_net":{
+        "hidden_shapes": [400,400],
+        "append_hidden_shapes": []
+    },
+
+    "p_task_net":{
+        "hidden_shapes": [400],
+        "append_hidden_shapes": []
+    },
+
+    "p_action_net":{
+        "hidden_shapes": [400,400],
+        "append_hidden_shapes": [400,400]
+    },
+
+    "save_embedding": true,
+
+    "save_velocity": true
+}

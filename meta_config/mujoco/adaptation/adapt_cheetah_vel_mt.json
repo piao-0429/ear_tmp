@@ -1,0 +1,22 @@
+{
+    "env_name" : "HalfCheetah-v3",
+
+    
+
+    "cat_state_task": false,
+
+    "net":{
+        "hidden_shapes": [400,400],
+        "append_hidden_shapes": [400]
+    },
+
+
+
+   
+
+    "general_setting": {
+        "num_epochs" : 20,
+        "num_samples" : 10,
+        "num_bests" : 5
+    }
+}

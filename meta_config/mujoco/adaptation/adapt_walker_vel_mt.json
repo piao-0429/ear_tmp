@@ -1,0 +1,18 @@
+{
+    "env_name" : "Walker2d-v3",
+
+
+    "cat_state_task": false,
+
+
+    "net":{
+        "hidden_shapes": [400,400],
+        "append_hidden_shapes": [400,400]
+    },
+
+    "general_setting": {
+        "num_epochs" : 20,
+        "num_samples" : 15,
+        "num_bests" : 6
+    }
+}

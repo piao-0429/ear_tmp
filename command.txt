@@ -1,0 +1,175 @@
+#Action-Representation code commands
+
+1.train
+python starter/train/mhmt_sac.py --config meta_config/mujoco/train/mtmhsac_train.json --id MHMT_MUJOCO_CHEETAH_VEL_10 --seed 1 --worker_nums 10 --eval_worker_nums 10
+python starter/train/mhmt_sac.py --config meta_config/mujoco/train/mtmhsac_train.json --id MHMT_MUJOCO_ANT_DIR_24 --seed 1 --worker_nums 24 --eval_worker_nums 24
+python starter/train/mt_para_mtsac_modular_gated_cas.py --config meta_config/mujoco/train/modular_2_2_2_256_reweight_train.json --id MODULAR_CHEETAH_VEL_10 --seed 1 --worker_nums 10 --eval_worker_nums 10
+
+
+python starter/train/ar_train.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_HALFCHEETAH_12 --seed 1 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_ANT_DIR_12 --seed 6 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_ANT_VEL_8 --seed 1 --worker_nums 8 --eval_worker_nums 8
+python starter/train/ar_train_v2.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_ANT_DIR_12_v2 --seed 1 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train_v3.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_ANT_DIR_12_v3 --seed 1 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train_v4.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ARMT_ANT_DIR_12_v4 --seed 1 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train_embed_withnorm_v4.py --config meta_config/mujoco/train/arsac_train_embed_withnorm.json --id MUJOCO_ARMT_ANT_DIR_12_v4 --seed 1 --worker_nums 1 --eval_worker_nums 1
+python starter/train/ar_train_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_ANT_DIR_12_v4 --seed 7 --worker_nums 12 --eval_worker_nums 12
+python starter/train/ar_train_withnoise_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_ANT_DIR_24_withnoise_v4 --seed 5 --worker_nums 24 --eval_worker_nums 24
+
+
+python starter/train/ar_train_withnoise_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_ANT_DIR_36_withnoise_v4 --seed 1 --worker_nums 36 --eval_worker_nums 36
+python starter/train/ar_train_withnoise_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_CHEETAH_VEL_8_withnoise_v4 --seed 3 --worker_nums 8 --eval_worker_nums 8
+python starter/finetune/embedding_ant.py --config meta_config/mujoco/finetune/embedding.json --id MUJOCO_ANT_DIR_24_withnoise_v4 --seed 2
+python starter/finetune/embedding.py --config meta_config/mujoco/finetune/embedding.json --id MUJOCO_CHEETAH_VEL_8_withnoise_v4 --seed 1
+python starter/train/ar_train_withnoise_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_CHEETAH_DIR_2_withnoise_v4 --seed 3 --worker_nums 2 --eval_worker_nums 2
+python starter/train/ar_train_withnoise_v4.py --config meta_config/mujoco/train/arsac_train_v4.json --id MUJOCO_CHEETAH_RUNSTAND_10_withnoise_v4 --seed 3 --worker_nums 10 --eval_worker_nums 10
+
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_CHEETAH_VEL_10_withnoise --seed 5 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id MUJOCO_ANT_DIR_24_withnoise_5 --seed 5 --worker_nums 24 --eval_worker_nums 24
+python starter/finetune/embedding_cheetah.py --config meta_config/mujoco/finetune/embedding.json --id MUJOCO_CHEETAH_VEL_10_withnoise --seed 3
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_HOPPER_VEL_10_scale_reward --seed 1 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_HOPPER_VEL_10_withnoise_nostop_nopenalty --seed 3 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_HOPPER_VEL_10_withnoise_nostop --seed 3 --worker_nums 10 --eval_worker_nums 10
+
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_ANT_DIR_24 --seed 3 --worker_nums 24 --eval_worker_nums 24
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_WALKER_VEL_10_scale_reward --seed 5 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_HUMANOID_VEL_10_scale_reward --seed 1 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_HOPPER_VEL_10_scale_reward --seed 3 --worker_nums 10 --eval_worker_nums 10
+python starter/adaptation/adapt_vel.py --config meta_config/mujoco/adaptation/adapt_walker_vel.json --id AR_WALKER_VEL_10_scale_reward --seed 1
+
+python starter/adaptation/adapt_vel.py --config meta_config/mujoco/adaptation/adapt_cheetah_vel.json --id AR_CHEETAH_VEL_10_withnoise --seed 1
+
+python starter/adaptation/adapt_dir.py --config meta_config/mujoco/adaptation/adapt_ant_dir.json --id EAR_SAC --seed 1
+python starter/adaptation/adapt_vel.py --config meta_config/mujoco/adaptation/adapt_cheetah_vel.json --id EAR_SAC --seed 1
+python starter/adaptation/adapt_vel.py --config meta_config/mujoco/adaptation/adapt_walker_vel.json --id EAR_SAC --seed 1
+python starter/adaptation/adapt_vel.py --config meta_config/mujoco/adaptation/adapt_hopper_vel.json --id EAR_SAC --seed 1
+
+python starter/adaptation/adapt_vel_mt.py --config meta_config/mujoco/adaptation/adapt_walker_vel_mt.json --id OHE_SAC --seed 1
+
+python starter/train/mt_sac.py --config meta_config/mujoco/train/mtsac_train.json --id MT_SAC_ --seed 1 --worker_nums 24 --eval_worker_nums 24
+
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id EAR_SAC --seed 2 --worker_nums 10 --eval_worker_nums 10
+
+python starter/adaptation/adapt_dir_mt.py --config meta_config/mujoco/adaptation/adapt_ant_dir_mt.json --id MT_SAC --seed 1
+
+
+python starter/train/ar_train_withnoise.py --config meta_config/mujoco/train/arsac_train.json --id AR_CHEETAH_RUNJUMP --seed 1 --worker_nums 8 --eval_worker_nums 8
+
+python starter/train/ar_train_withnorm.py --config meta_config/mujoco/train/arsac_train.json --id EAR_SAC_withoutnoise --seed 1 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train.py --config meta_config/mujoco/train/arsac_train.json --id EAR_SAC_withoutnorm --seed 1 --worker_nums 10 --eval_worker_nums 10
+python starter/train/ar_train.py --config meta_config/mujoco/train/arsac_train.json --id EAR_SAC_withoutnorm --seed 5 --worker_nums 24 --eval_worker_nums 24
+
+python starter/train/ar_train_withnoise_metaworld.py --config meta_config/mujoco/train/arsac_train.json --id EAR_REACH --seed 0 --worker_nums 10 --eval_worker_nums 10
+
+2.plot
+
+python torchrl/utils/plot_csv.py --id MUJOCO_ARMT_ANT_VEL_10 --env_name Ant-v3 --entry "backward_1_eval_rewards" --add_tag _MUJOCO_ARMT_ANT_VEL_10_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ARMT_ANT_DIR_12_v4_embed_withnorm_v4 --env_name Ant-v3 --entry "dir_330_embed_withnorm_v4_eval_rewards" --add_tag _MUJOCO_ARMT_ANT_DIR_12_v4_embed_withnorm_v4_seed_1 --seed 1
+
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_0_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_30_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_60_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_90_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_120_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_150_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_180_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_210_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_240_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_270_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_300_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_12_withnoise_v4 --env_name Ant-v3 --entry "direction_330_eval_rewards" --add_tag _MUJOCO_ANT_DIR_12_withnoise_v4_seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_24_withnoise_v4 --env_name Ant-v3 --entry "Running_Average_Rewards" --add_tag _MUJOCO_ANT_DIR_24_withnoise_v4_seed_235 --seed 2 3 5
+python torchrl/utils/plot_csv.py --id MUJOCO_CHEETAH_DIR_2_withnoise_v4 --env_name HalfCheetah-v3 --entry "Running_Average_Rewards" --add_tag _MUJOCO_CHEETAH_DIR_2_withnoise_v4_seed_123 --seed 1 2 3
+python torchrl/utils/plot_csv.py --id MUJOCO_CHEETAH_VEL_8_withnoise_v4 --env_name HalfCheetah-v3 --entry "Running_Average_Rewards" --add_tag _MUJOCO_CHEETAH_VEL_8_withnoise_v4_seed_123 --seed 1 2 3
+
+python torchrl/utils/plot_csv.py --id MUJOCO_ANT_DIR_24_withnoise MHMT_MUJOCO_ANT_DIR_24 --env_name Ant-v3 --entry "Running_Average_Rewards" --add_tag _seed_1 --seed 1
+python torchrl/utils/plot_csv.py --id PEARL_ANT_DIR_24 MUJOCO_ANT_DIR_24_withnoise  --env_name Ant-v3 --entry "Running_Average_Rewards" --add_tag _seed_3 --seed 3
+
+python torchrl/utils/plot_csv.py --id PEARL_ANT_DIR_24 MUJOCO_ANT_DIR_24_withnoise  --env_name Ant-v3 --entry "Running_Average_Rewards" --add_tag _seed_3 --seed 3
+
+python torchrl/utils/plot_csv.py --id AR_CHEETAH_VEL_10_withnoise PEARL_CHEETAH_VEL_10 --env_name HalfCheetah-v3 --entry "Running_Average_Rewards" --add_tag _seed_13 --seed 1 3
+
+
+python torchrl/utils/plot_csv.py --id AR_HOPPER_VEL_10_scale_reward_finetune  --env_name Hopper-v3 --entry "Reward" --add_tag _seed_135 --seed 1 3 5
+python torchrl/utils/plot_csv.py --id  MT_SAC_ --env_name HalfCheetah-v3 --entry "Running_Average_Rewards" --add_tag _seed --seed 1
+
+AverageReturn_all_train_tasks
+
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_1_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_2_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_3_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_4_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_5_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_6_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_7_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_8_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_9_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "vel_10_eval_rewards"
+python torchrl/utils/plot_csv.py --id AR_WALKER_VEL_10_scale_reward --env_name Walker2d-v3 --add_tag _AR_WALKER_VEL_10_scale_reward_seed_1 --seed 1 --entry "Running_Average_Rewards"
+
+
+
+python torchrl/utils/plot_csv.py --id AR_CHEETAH_VEL_10_withnoise PEARL_CHEETAH_VEL --env_name HalfCheetah-v3 --add_tag _compare_seed_13 --seed 1 3 --entry "Running_Average_Rewards" 
+python torchrl/utils/plot_csv.py --id AR_CHEETAH_VEL_10_withnoise --env_name HalfCheetah-v3 --add_tag _AR_CHEETAH_VEL_10_withnoise_seed_135 --seed 1 3 5 --entry "Running_Average_Rewards" 
+python torchrl/utils/plot_csv.py --id AR_CHEETAH_VEL_10_withnoise_finetune PEARL_CHEETAH_VEL_finetune --env_name HalfCheetah-v3 --add_tag _compare_seed_13 --seed 1 3--entry "Reward" 
+
+
+python torchrl/utils/plot_csv.py --id LTE_SAC PEARL_DENSE MT_SAC --env_name Ant-Dir --add_tag _train --seed 1 3 5 --entry "Running_Average_Rewards" 
+
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC PEARL MHMT_SAC OHE_SAC --env_name HalfCheetah-Vel --add_tag _train --seed 1 3 5 --entry "Running_Average_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC PEARL MHMT_SAC OHE_SAC --env_name Hopper-Vel --add_tag _train --seed 1 3 5 --entry "Running_Average_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC PEARL MHMT_SAC OHE_SAC --env_name Walker-Vel --add_tag _train --seed 1 3 5 --entry "Running_Average_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC PEARL MHMT_SAC OHE_SAC --env_name Ant-Dir --add_tag _train --seed 1 3 5 --entry "Running_Average_Rewards" 
+python plot.py
+
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC_finetune PEARL_finetune MAML_finetune OHE_SAC_finetune --env_name HalfCheetah-Vel --add_tag _adapt --seed 1 3 5 --entry "Adaptation_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC_finetune PEARL_finetune MAML_finetune OHE_SAC_finetune --env_name Hopper-Vel --add_tag _adapt --seed 1 3 5 --entry "Adaptation_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC_finetune PEARL_finetune MAML_finetune OHE_SAC_finetune --env_name Walker-Vel --add_tag _adapt --seed 1 3 5 --entry "Adaptation_Rewards" 
+python torchrl/utils/plot_csv.py --output_dir "./fig_exp" --id EAR_SAC_finetune PEARL_finetune MAML_finetune OHE_SAC_finetune --env_name Ant-Dir --add_tag _adapt --seed 1 3 5 --entry "Adaptation_Rewards" 
+python plot.py
+
+python torchrl/utils/plot_csv.py --output_dir "./fig" --id EAR_REACH --env_name MetaWorld-Reach --add_tag _test --seed 1 --entry "Running_Average_Rewards" 
+
+3.evaluate
+python starter/visual/ar_visual_net.py --config meta_config/mujoco/visual/arsac_visual_net.json --id MUJOCO_ARMT_10_2mode --seed 1
+
+python starter/visual/ar_visual_embed.py --config meta_config/mujoco/visual/arsac_visual_embed.json --id MUJOCO_ARMT_10_BASE --seed 1
+
+python starter/visual/ar_visual.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_ARMT_10_BASE --seed 1
+python starter/visual/ar_visual_mixed.py --config meta_config/mujoco/visual/arsac_visual_mixed.json --id MUJOCO_ARMT_10 --seed 2
+python starter/visual/ar_visual.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_ARMT_ANT_DIR_12 --seed 4
+
+python embedding_space_generate.py --config meta_config/mujoco/visual/arsac_visual_embedding_space.json --id MUJOCO_ARMT_10 --seed 2
+
+python plotting_embedding_space.py --config meta_config/mujoco/visual/arsac_visual_embedding_space.json --id MUJOCO_ARMT_10_BASE --seed 1
+      
+python starter/visual/ar_visual.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_ARMT_ANT_DIR_12_v2 --seed 1
+python starter/visual/ar_visual.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_ARMT_ANT_DIR_12_v3 --seed 1
+python starter/visual/ar_visual_mixed.py --config meta_config/mujoco/visual/arsac_visual_mixed.json --id MUJOCO_ARMT_ANT_DIR_12_v3 --seed 1
+python starter/visual/ar_visual.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_ARMT_ANT_DIR_12_v4 --seed 1
+python starter/visual/ar_visual_mixed.py --config meta_config/mujoco/visual/arsac_visual_mixed.json --id MUJOCO_ARMT_ANT_DIR_12_v4 --seed 1
+python starter/visual/ar_visual_mixed_v4.py --config meta_config/mujoco/visual/arsac_visual_mixed_v4.json --id MUJOCO_ANT_DIR_12_v4 --seed 6
+python starter/visual/ar_visual_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_12_v4 --seed 6
+python starter/visual/ar_visual_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_12_withnoise_v4 --seed 3
+python starter/visual/ar_visual_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_24_withnoise_v4 --seed 1
+python starter/visual/ar_visual_mixed_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_24_withnoise_v4 --seed 2
+python starter/visual/ar_visual_mixed_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_12_withnoise_v4 --seed 3
+
+python starter/visual/ar_visual_embedding.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_ANT_DIR_12_withnoise_v4 --seed 2
+python starter/visual/ar_visual_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_CHEETAH_VEL_8_withnoise_v4 --seed 1
+python starter/visual/ar_visual_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_CHEETAH_DIR_2_withnoise_v4 --seed 1
+
+python starter/visual/ar_visual_mixed_withnorm_v4.py --config meta_config/mujoco/visual/arsac_visual_v4.json --id MUJOCO_CHEETAH_VEL_8_withnoise_v4 --seed 2
+
+python starter/visual/ar_visual_withnorm.py --config meta_config/mujoco/visual/arsac_visual.json --id MUJOCO_CHEETAH_VEL_10_withnoise --seed 3
+
+python starter/visual/ar_visual_mixed_withnorm.py --config meta_config/mujoco/visual/arsac_visual_mixed.json --id EAR_SAC --seed 1
+
+
+python starter/visual/ar_visual_mixed_withnorm_tuning.py --config meta_config/mujoco/visual/arsac_visual_mixed.json --id EAR_SAC --seed 1
+
+
+python starter/visual/ar_visual_withnorm.py --config meta_config/mujoco/visual/arsac_visual.json --id AR_CHEETAH_VEL_10_withnoise --seed 1
+python starter/visual/ar_visual_withnorm.py --config meta_config/mujoco/visual/arsac_visual.json --id LTE_SAC --seed 1
+python starter/visual/ar_visual_withnorm.py --config meta_config/mujoco/visual/arsac_visual.json --id AR_WALKER_VEL_10_scale_reward --seed 1
+python starter/visual/ar_visual_withnorm.py --config meta_config/mujoco/visual/arsac_visual.json --id AR_HUMANOID_VEL_10_scale_reward --seed 1
